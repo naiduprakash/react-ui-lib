@@ -3,7 +3,7 @@
 	"description": "Button component",
 	"version": "1.0.0",
 	"license": "MIT",
-	"author": "Audrius Navickas",
+	"author": "Prakash Naidu",
 	"main": "dist/index.js",
 	"publishConfig": {
 		"access": "public"

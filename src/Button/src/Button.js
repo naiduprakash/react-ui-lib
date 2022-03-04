@@ -1,6 +1,13 @@
-import React from 'react';
-import './button.scss';
+import React from "react";
 
-const Button = props => <button type="button" className="button" onClick={props.onClick}>{props.children}</button>;
-
-export default Button;
+export default function Button(props) {
+	return (
+		<button
+			className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+			type="button"
+			onClick={props.onClick}
+		>
+			{props.children}
+		</button>
+	);
+}
