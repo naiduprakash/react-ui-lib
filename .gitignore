@@ -1,7 +1,7 @@
 # Code editors
 .idea
 
-.DS_Store
+**/.DS_Store
 
 # Depencendies
 node_modules
