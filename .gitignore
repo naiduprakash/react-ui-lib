@@ -2,9 +2,11 @@
 .idea
 
 **/.DS_Store
+docs
 
 # Depencendies
 node_modules
+
 
 # Builds
 dist
