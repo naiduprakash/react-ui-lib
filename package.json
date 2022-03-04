@@ -12,7 +12,7 @@
 		"start": "start-storybook -p 9001 -c .storybook",
 		"build-storybook": "build-storybook -o docs",
 		"predeploy": "npm run build-storybook",
-		"deploy": "gh-pages -d build"
+		"deploy": "gh-pages -d docs"
 	},
 	"author": "Prakash Naidu",
 	"devDependencies": {
