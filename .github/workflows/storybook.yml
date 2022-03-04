@@ -10,6 +10,8 @@ jobs:
                   persist-credentials: false
             - name: Install and Build 🔧
               run: | # Install npm packages and build the Storybook files
+                  git config user.email "prakash.naidu20101995@gmail.com"
+                  git config user.name "naiduprakash"
                   npm install
                   npm run deploy
             - name: Deploy 🚀
