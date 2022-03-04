@@ -8,6 +8,6 @@ storiesOf("Button", module).add("Default", () => (
 			alert("You are best !=)");
 		}}
 	>
-		Click me
+		Click me !!!
 	</Button>
 ));
