@@ -1,0 +1,5 @@
+node_modules/*
+configs/*
+.scripts/*
+postcss.config.js
+webpack.config.js
