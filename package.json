@@ -9,7 +9,7 @@
 		"publish-components": "lerna publish",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "start-storybook -p 9001 -c .storybook",
-		"build-storybook": "build-storybook"
+		"build-storybook": "build-storybook -o docs"
 	},
 	"author": "Prakash Naidu",
 	"devDependencies": {
