@@ -1,13 +1,42 @@
 import React from "react";
+import { cx, __DEV__ } from "@react-ui-lib/utils";
+import { useButtonClass } from "./styles";
 
-export default function Button(props) {
+const Button = React.forwardRef((props, ref) => {
+	const {
+		className = "",
+		variant = "solid",
+		rounded = false,
+		size = "md",
+		type = "blue",
+		disabled = false,
+		children,
+		style,
+		...restProps
+	} = props;
+
+	const classes = useButtonClass({
+		disabled,
+		variant,
+		rounded,
+		size,
+		type
+	});
+
+	let styles = {};
+	
+
 	return (
 		<button
-			className="bg-blue-500  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-			type="button"
-			{...props}
+			ref={ref}
+			disabled={disabled}
+			style={styles}
+			className={cx(classes, className)}
+			{...restProps}
 		>
-			{props.children}
+			{children}
 		</button>
 	);
-}
+});
+
+export default Button;
