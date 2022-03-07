@@ -15,7 +15,6 @@ const Button = React.forwardRef((props, ref) => {
 		style = {},
 		...restProps
 	} = props;
-
 	const classes = useButtonClass({
 		disabled,
 		variant,
@@ -23,7 +22,6 @@ const Button = React.forwardRef((props, ref) => {
 		size,
 		type
 	});
-
 	let styles = { ...style };
 
 	return (

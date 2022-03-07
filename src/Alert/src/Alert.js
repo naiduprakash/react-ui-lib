@@ -12,12 +12,10 @@ const Alert = React.forwardRef((props) => {
 		style = {},
 		...restProps
 	} = props;
-
 	const classes = useAlertClass({
 		variant,
 		type
 	});
-
 	let styles = { ...style };
 
 	return (
