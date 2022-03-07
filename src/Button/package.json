@@ -1,7 +1,7 @@
 {
 	"name": "@react-ui-lib/button",
 	"description": "Button component",
-	"version": "1.0.8-alpha.0",
+	"version": "1.0.9-alpha.0",
 	"license": "MIT",
 	"author": "Prakash Naidu",
 	"main": "dist/index.js",
@@ -18,6 +18,6 @@
 		"react-dom": "^16.8.2"
 	},
 	"dependencies": {
-		"@react-ui-lib/utils": "^1.0.7-alpha.0"
+		"@react-ui-lib/utils": "^1.0.8-alpha.0"
 	}
 }
