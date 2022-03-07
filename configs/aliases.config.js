@@ -4,6 +4,7 @@ const path = require("path");
 
 const aliases = {
 	"@react-ui-lib/Button": path.resolve(__dirname, "../src/Button/src"),
+	"@react-ui-lib/Alert": path.resolve(__dirname, "../src/Alert/src"),
 	"@react-ui-lib/utils": path.resolve(__dirname, "../src/utils/src")
 };
 

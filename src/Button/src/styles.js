@@ -49,7 +49,7 @@ const sizes = {
 
 export const useButtonClass = (props) => {
 	let commonClasses =
-		"border transition ease-in-out duration-300 shadow-sm rounded whitespace-nowrap";
+		"flex border transition ease-in-out duration-300 shadow-sm rounded whitespace-nowrap";
 	let sizeClasses = sizes[props.size];
 
 	let roundedClasses = props.rounded && "rounded-full";
@@ -57,13 +57,13 @@ export const useButtonClass = (props) => {
 	let linkedClasses =
 		props.variant === "link" &&
 		"border-0 bg-transparent underline  hover:border-0 active:border:0";
-	let bgColorClass = colors(props);
+	let colorClass = colors(props);
 
 	return cx(
 		commonClasses,
 		sizeClasses,
 		roundedClasses,
-		bgColorClass,
+		colorClass,
 		disabledClasses,
 		linkedClasses
 	);

@@ -11,7 +11,7 @@ const Button = React.forwardRef((props, ref) => {
 		type = "blue",
 		disabled = false,
 		children,
-		style,
+		style = {},
 		...restProps
 	} = props;
 
@@ -23,8 +23,7 @@ const Button = React.forwardRef((props, ref) => {
 		type
 	});
 
-	let styles = {};
-	
+	let styles = { ...style };
 
 	return (
 		<button
@@ -32,6 +31,7 @@ const Button = React.forwardRef((props, ref) => {
 			disabled={disabled}
 			style={styles}
 			className={cx(classes, className)}
+			role="button"
 			{...restProps}
 		>
 			{children}
