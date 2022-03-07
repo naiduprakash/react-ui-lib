@@ -16,5 +16,8 @@
 	"peerDependencies": {
 		"react": "^16.8.2",
 		"react-dom": "^16.8.2"
+	},
+	"dependencies": {
+		"@react-ui-lib/utils": "^1.0.6-alpha.0"
 	}
 }
