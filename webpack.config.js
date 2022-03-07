@@ -1,26 +1,11 @@
 const pkg = require("./package.json");
 const { aliases } = require("./configs/aliases.config");
+const rules = require("./configs/rules.config");
 
 module.exports = () => {
-	return {
+	let config = {
 		module: {
-			rules: [
-				{
-					exclude: /node_modules/,
-					test: /\.(sa|sc|c)ss$/,
-					use: ["style-loader", "css-loader", "sass-loader"]
-				},
-				{
-					test: /\.(js|jsx)$/,
-					exclude: /node_modules/,
-					use: {
-						loader: "babel-loader",
-						options: {
-							presets: ["@babel/preset-env", "@babel/react"]
-						}
-					}
-				}
-			]
+			rules: rules
 		},
 		entry: "./src/index.js",
 		output: {
@@ -32,4 +17,7 @@ module.exports = () => {
 			modules: ["node_modules"]
 		}
 	};
+
+	console.log(config);
+	return config;
 };
