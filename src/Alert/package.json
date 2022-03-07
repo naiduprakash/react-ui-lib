@@ -1,7 +1,7 @@
 {
 	"name": "@react-ui-lib/alert",
 	"description": "Alert component",
-	"version": "1.0.2-alpha.0",
+	"version": "1.0.3-alpha.0",
 	"license": "MIT",
 	"author": "Prakash Naidu",
 	"main": "dist/index.js",
