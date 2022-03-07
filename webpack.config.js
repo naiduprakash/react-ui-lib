@@ -24,12 +24,7 @@ module.exports = () => {
 		},
 		entry: "./src/index.js",
 		output: {
-			filename: pkg.main,
-			library: {
-				name: "__DUMMY_WEBPACK_VAR_NOT_MEANT_FOR_USE__",
-				type: "var"
-			},
-			libraryTarget: "commonjs"
+			filename: pkg.main
 		},
 		resolve: {
 			alias: aliases,
