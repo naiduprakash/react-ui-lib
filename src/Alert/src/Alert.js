@@ -3,6 +3,8 @@ import React from "react";
 import { cx, __DEV__ } from "@react-ui-lib/utils";
 import { useAlertClass } from "./styles";
 
+import "./index.css";
+
 const Alert = React.forwardRef((props) => {
 	const {
 		children,

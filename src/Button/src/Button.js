@@ -3,6 +3,8 @@ import React from "react";
 import { cx, __DEV__ } from "@react-ui-lib/utils";
 import { useButtonClass } from "./styles";
 
+import "./index.css";
+
 const Button = React.forwardRef((props, ref) => {
 	const {
 		className = "",
