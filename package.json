@@ -7,7 +7,7 @@
 	"scripts": {
 		"start": "start-storybook -p 9001 -c .storybook",
 		"clean": "rimraf dist && rimraf package-lock.json && rimraf node_modules",
-		"prebuild": "npm run clean && npm install --legacy-peer-deps",
+		"prebuild": "npm install --legacy-peer-deps",
 		"build": "npm run build:components && npm run build:storybook",
 		"build:components": "lerna exec npm run \"build\"",
 		"build:storybook": "build-storybook -o docs",
