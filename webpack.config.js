@@ -1,7 +1,5 @@
 const pkg = require("./package.json");
 const { aliases } = require("./configs/aliases.config");
-// const rules = require("./configs/rules.config");
-const autoprefixer = require("autoprefixer");
 
 module.exports = (env) => {
 	let config = {
@@ -15,19 +13,7 @@ module.exports = (env) => {
 			rules: [
 				{
 					test: /(\.css|\.scss|\.sass)$/,
-					use: [
-						"style-loader",
-						{ loader: "css-loader", options: { sourceMap: true } },
-						{
-							loader: "postcss-loader",
-							options: {
-								sourceMap: true,
-								ident: "postcss",
-								plugins: [autoprefixer]
-							}
-						},
-						{ loader: "sass-loader", options: { sourceMap: true } }
-					]
+					use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"]
 				},
 				{
 					test: /\.(js|jsx)$/,
