@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@react-ui-lib/Button";
+import Button from "../dist";
 
 import { cx } from "@react-ui-lib/utils";
 

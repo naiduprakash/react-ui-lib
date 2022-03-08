@@ -4,12 +4,10 @@ jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
         steps:
-            
             - uses: actions/checkout@v2.3.1
             - run: git config user.email "prakash.naidu20101995@gmail.com"
             - run: git config user.name "naiduprakash"
             - run: git remote set-url origin https://naiduprakash:${{ secrets.GITHUB_TOKEN }}@github.com/naiduprakash/react-ui-lib.git
             - run: npm run build
-            - run: npm run publish-components
             - run: npm run deploy
 
