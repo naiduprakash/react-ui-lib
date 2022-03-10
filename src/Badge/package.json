@@ -1,7 +1,7 @@
 {
-	"name": "@react-ui-lib/component",
-	"description": "Component component",
-	"version": "1.0.8-alpha.0",
+	"name": "@react-ui-lib/badge",
+	"description": "Badge component",
+	"version": "1.0.0",
 	"license": "MIT",
 	"author": "Prakash Naidu",
 	"main": "dist/index.js",
@@ -10,7 +10,7 @@
 	},
 	"scripts": {
 		"prebuild": "npm run clean && npm install --legacy-peer-deps",
-		"build": "cross-env webpack --mode production --config ../../webpack.config.js --env package=@react-ui-lib/component",
+		"build": "cross-env webpack --mode production --config ../../webpack.config.js --env package=@react-ui-lib/badge",
 		"clean": "rimraf dist && rimraf package-lock.json && rimraf node_modules ",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

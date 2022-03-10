@@ -5,6 +5,10 @@ const colors = (props) => {
 	let isLinked = props.variant === "link";
 	let isDisabled = props.disabled;
 	return {
+		default: `
+    border-gray-200 
+    bg-white text-black-500
+    active:bg-gray-400 hover:bg-gray-200`,
 		primary: `
     border-blue-500 
     ${isOutlined ? "bg-transparent text-blue-500 hover:text-white" : "bg-blue-500 text-white"} 

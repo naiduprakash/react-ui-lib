@@ -1,5 +1,5 @@
-# Component component
+# Component Component
 
 ## Usage
 
-Import component with: `import Component from '@react-ui-lib/Component';`
+Import Component with: `import Component from '@react-ui-lib/component';`
