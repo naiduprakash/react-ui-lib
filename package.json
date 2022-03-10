@@ -11,7 +11,7 @@
 		"build": "npm run build:components && npm run build:storybook",
 		"build:components": "lerna exec npm run \"build\"",
 		"build:storybook": "build-storybook -o docs",
-		"publish": "lerna publish --yes",
+		"publish": "lerna publish",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"deploy": "gh-pages -d docs"
 	},
