@@ -5,7 +5,7 @@
 	"description": "A components library",
 	"main": "index.js",
 	"scripts": {
-		"start": "start-storybook -p 9001 -c .storybook",
+		"start": "start-storybook --no-manager-cache -p 9001 -c .storybook",
 		"clean": "rimraf dist && rimraf package-lock.json && rimraf node_modules",
 		"prebuild": "npm install --legacy-peer-deps",
 		"build": "npm run build:components && npm run build:storybook",
