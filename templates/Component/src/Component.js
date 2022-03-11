@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function Component(props) {
+const Component = React.forwardRef((props) => {
 	return <div {...props}>Sample component</div>;
-}
+});
+
+export default Component;

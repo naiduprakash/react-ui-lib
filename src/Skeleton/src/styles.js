@@ -3,7 +3,7 @@ import { cx } from "@react-ui-lib/utils";
 const animations = (props) => {
 	return {
 		pulse: "animate-pulse  duration-2000 ease-in-out",
-		wave: "relative overflow-hidden before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:bg-[length:50%] before:bg-no-repeat before:from-gray-200  before:to-gray-100 before:animate-[wave_2s_ease-in-out_infinite]",
+		wave: "relative z-[1] translate-z-1 overflow-hidden before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:bg-[length:50%_100%] before:bg-no-repeat before:from-gray-200  before:to-gray-100 before:animate-[wave_2s_ease-in-out_infinite]",
 		false: ""
 	}[props.animation];
 };
