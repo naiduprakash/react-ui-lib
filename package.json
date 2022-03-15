@@ -12,6 +12,7 @@
 		"build:components": "lerna exec npm run \"build\"",
 		"build:storybook": "build-storybook -o docs",
 		"publish": "lerna publish --yes",
+		"bootstrap": "lerna bootstrap",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"deploy": "gh-pages -d docs"
 	},

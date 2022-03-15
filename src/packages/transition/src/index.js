@@ -91,7 +91,7 @@ function useNesting(done = () => {}) {
 		}
 	});
 
-	let register = useLatestValue((childId: ID) => {
+	let register = useLatestValue((childId) => {
 		let child = transitionableChildren.current.find(({ id }) => id === childId);
 		if (!child) {
 			transitionableChildren.current.push({ id: childId, state: TreeStates.Visible });

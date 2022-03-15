@@ -1,6 +1,6 @@
 {
-	"name": "@react-ui-lib/utils",
-	"description": "utils",
+	"name": "@react-ui-lib/transition",
+	"description": "transition",
 	"version": "1.0.11-alpha.0",
 	"license": "MIT",
 	"author": "Prakash Naidu",
@@ -10,7 +10,7 @@
 	},
 	"scripts": {
 		"prebuild": "npm run clean && npm install --legacy-peer-deps",
-		"build": "cross-env webpack --mode production --config ../../webpack.config.js --env package=@react-ui-lib/utils",
+		"build": "cross-env webpack --mode production --config ../../../webpack.config.js --env package=@react-ui-lib/transition",
 		"clean": "rimraf dist && rimraf package-lock.json  && rimraf node_modules",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

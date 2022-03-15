@@ -10,7 +10,7 @@
 	},
 	"scripts": {
 		"prebuild": "npm run clean && npm install --legacy-peer-deps",
-		"build": "cross-env webpack --mode production --config ../../webpack.config.js --env package=@react-ui-lib/portal",
+		"build": "cross-env webpack --mode production --config ../../../webpack.config.js --env package=@react-ui-lib/portal",
 		"clean": "rimraf dist && rimraf package-lock.json  && rimraf node_modules",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
