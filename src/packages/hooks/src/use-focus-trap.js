@@ -1,7 +1,12 @@
 import { useRef, useEffect } from "react";
 
-import { Keys } from "../../../internal/keyboard";
-import { focusElement, focusIn, Focus, FocusResult } from "../../utils/src";
+import { Keys } from "../../../internal/utils/keyboard";
+import {
+	focusElement,
+	focusIn,
+	Focus,
+	FocusResult
+} from "../../../internal/utils/focus-management";
 import { useEventListener } from "./use-event-listener";
 import { useIsMounted } from "./use-is-mounted";
 import { useOwnerDocument } from "./use-owner";
@@ -20,15 +25,10 @@ export const Features = {
 	FocusLock: 1 << 3,
 
 	/** Ensure that we restore the focus when unmounting the component that uses this `useFocusTrap` hook. */
-	RestoreFocus: 1 << 4,
-
+	RestoreFocus: 1 << 4
 };
 
-export function useFocusTrap(
-	container,
-	features,
-	{ initialFocus, containers } = {}
-) {
+export function useFocusTrap(container, features, { initialFocus, containers } = {}) {
 	let restoreElement = useRef(null);
 	let previousActiveElement = useRef(null);
 	let mounted = useIsMounted();

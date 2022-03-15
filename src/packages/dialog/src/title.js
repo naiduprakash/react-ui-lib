@@ -1,7 +1,7 @@
 import { useDialogContext } from "./context";
 import { useEffect, useMemo } from "react";
 
-import { forwardRefWithAs, render } from "../../utils/src";
+import { forwardRefWithAs, render } from "../../../internal/utils/render";
 import { useSyncRefs, useId } from "../../hooks/src";
 
 const DialogStates = {

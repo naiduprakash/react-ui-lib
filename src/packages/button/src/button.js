@@ -1,6 +1,6 @@
 import React from "react";
 
-import { cx } from "../../utils/src";
+import { cx } from "../../../internal/utils/class-names";
 import { useButtonClass } from "./styles";
 
 import "./index.css";
@@ -11,7 +11,7 @@ const Button = React.forwardRef((props, ref) => {
 		variant = "solid",
 		rounded = false,
 		size = "md",
-		type = "blue",
+		color = "blue",
 		disabled = false,
 		children,
 		style = {},
@@ -22,7 +22,7 @@ const Button = React.forwardRef((props, ref) => {
 		variant,
 		rounded,
 		size,
-		type
+		color
 	});
 	let styles = { ...style };
 

@@ -17,10 +17,17 @@ import {
 	useSyncRefs,
 	useLatestValue
 } from "../../hooks/src";
-import { match, render, forwardRefWithAs, Features, RenderStrategy } from "../../utils/src";
+
+import {
+	render,
+	forwardRefWithAs,
+	Features,
+	RenderStrategy
+} from "../../../internal/utils/render";
+import { match } from "../../../internal/utils/match";
 
 import { transition, Reason } from "./utils/transition";
-import { OpenClosedProvider, State, useOpenClosed } from "../../../internal/open-closed";
+import { OpenClosedProvider, State, useOpenClosed } from "../../../internal/utils/open-closed";
 
 const TreeStates = {
 	Visible: "visible",

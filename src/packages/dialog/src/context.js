@@ -1,18 +1,18 @@
 import React, { createContext, useContext } from "react";
 
-export const DialogContext = createContext(null);
+export const ModalContext = createContext(null);
 
-DialogContext.displayName = "DialogContext";
+ModalContext.displayName = "ModalContext";
 
-export function useDialogContext(component) {
-	let context = useContext(DialogContext);
+export function useModalContext(component) {
+	let context = useContext(ModalContext);
 	if (context === null) {
-		let err = new Error(`<${component} /> is missing a parent <Dialog /> component.`);
-		if (Error.captureStackTrace) Error.captureStackTrace(err, useDialogContext);
+		let err = new Error(`<${component} /> is missing a parent <Modal /> component.`);
+		if (Error.captureStackTrace) Error.captureStackTrace(err, useModalContext);
 		throw err;
 	}
 	return context;
 }
-export function DialogContextProvider({ children, value }) {
-	return <DialogContext.Provider value={value}>{children}</DialogContext.Provider>;
+export function ModalContextProvider({ children, value }) {
+	return <ModalContext.Provider value={value}>{children}</ModalContext.Provider>;
 }

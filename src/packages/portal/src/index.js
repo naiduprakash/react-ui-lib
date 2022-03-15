@@ -1,7 +1,7 @@
 import React, { Fragment, createContext, useContext, useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
 
-import { forwardRefWithAs, render } from "../../utils/src";
+import { forwardRefWithAs, render } from "../../../internal/utils/render";
 import {
 	useIsoMorphicEffect,
 	useServerHandoffComplete,
@@ -9,7 +9,7 @@ import {
 	useSyncRefs,
 	useOwnerDocument
 } from "../../hooks/src";
-import { usePortalRoot } from "../../../internal/portal-force-root";
+import { usePortalRoot } from "../../../internal/utils/portal-force-root";
 
 function usePortalTarget(ref) {
 	let forceInRoot = usePortalRoot();

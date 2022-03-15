@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import Dialog from "../src";
 import Transition from "../../transition/src";
+import Button from "../../button/src";
 
 export default {
 	title: "Dialog",
@@ -23,14 +24,10 @@ export function Example1() {
 
 	return (
 		<>
-			<div className="fixed inset-0 flex items-center justify-center">
-				<button
-					type="button"
-					onClick={openModal}
-					className="px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-				>
+			<div className="inset-0 flex items-center justify-center">
+				<Button type="button" color="primary" onClick={openModal}>
 					Open dialog
-				</button>
+				</Button>
 			</div>
 
 			<Transition
@@ -45,32 +42,55 @@ export function Example1() {
 			>
 				<Dialog
 					as="div"
-					className="fixed inset-0 z-10 overflow-y-auto"
 					onClose={closeModal}
+					classNames={{
+						content:
+							"inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl"
+					}}
 				>
-					<div className="min-h-screen px-4 text-center">
-						<Dialog.Overlay className="fixed inset-0 bg-gray-600 opacity-5" />
-
-						{/* This element is to trick the browser into centering the modal contents. */}
-						<span className="inline-block h-screen align-middle" aria-hidden="true">
-							&#8203;
-						</span>
-
-						<div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-							<Dialog.Title
-								as="h3"
-								className="text-lg font-medium leading-6 text-gray-900"
-							>
-								Payment successful
-							</Dialog.Title>
-							<Dialog.Description>
-								Your payment has been successfully submitted. We’ve sent you an
-								email with all of the details of your order.
-							</Dialog.Description>
-						</div>
-					</div>
+					<h3 className="text-lg font-medium leading-6 text-gray-900">
+						Payment successful
+					</h3>
+					<p>
+						Your payment has been successfully submitted. We’ve sent you an email with
+						all of the details of your order.
+					</p>
 				</Dialog>
 			</Transition>
+		</>
+	);
+}
+
+export function Example2() {
+	let [isOpen, setIsOpen] = useState(false);
+
+	function closeModal() {
+		setIsOpen(false);
+	}
+
+	function openModal() {
+		setIsOpen(true);
+	}
+
+	return (
+		<>
+			<div className="inset-0 flex items-center justify-center">
+				<Button type="button" color="primary" onClick={openModal}>
+					Open dialog
+				</Button>
+			</div>
+
+			<Dialog
+				as="div"
+				open={isOpen}
+				onClose={closeModal}
+			>
+				<h3 className="text-lg font-medium leading-6 text-gray-900">Payment successful</h3>
+				<p>
+					Your payment has been successfully submitted. We’ve sent you an email with all
+					of the details of your order.
+				</p>
+			</Dialog>
 		</>
 	);
 }

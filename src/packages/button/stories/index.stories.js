@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../src";
 
-import { cx } from "../../utils/src";
+import { cx } from "../../../internal/utils/class-names";
 
 const ErrorIcon = (props) => {
 	return (
@@ -102,34 +102,34 @@ export const Examples = () => {
 				<div className="w-1/2 my-5">
 					<p className="font-bold mb-2">Solid</p>
 					<div className="flex items-start space-x-2">
-						<Button type="primary">Primary</Button>
-						<Button type="secondary">Secondary</Button>
-						<Button type="success">Success</Button>
-						<Button type="info">Info</Button>
-						<Button type="warning">Warning</Button>
-						<Button type="danger">Danger</Button>
+						<Button color="primary">Primary</Button>
+						<Button color="secondary">Secondary</Button>
+						<Button color="success">Success</Button>
+						<Button color="info">Info</Button>
+						<Button color="warning">Warning</Button>
+						<Button color="danger">Danger</Button>
 					</div>
 				</div>
 
 				<div className="w-1/2 my-5">
 					<p className="font-bold mb-2">Outline</p>
 					<div className="flex items-start space-x-2">
-						<Button type="primary" variant="outline">
+						<Button color="primary" variant="outline">
 							Primary
 						</Button>
-						<Button type="secondary" variant="outline">
+						<Button color="secondary" variant="outline">
 							Secondary
 						</Button>
-						<Button type="success" variant="outline">
+						<Button color="success" variant="outline">
 							Success
 						</Button>
-						<Button type="info" variant="outline">
+						<Button color="info" variant="outline">
 							Info
 						</Button>
-						<Button type="warning" variant="outline">
+						<Button color="warning" variant="outline">
 							Warning
 						</Button>
-						<Button type="danger" variant="outline">
+						<Button color="danger" variant="outline">
 							Danger
 						</Button>
 					</div>
@@ -139,19 +139,19 @@ export const Examples = () => {
 				<div className="w-1/2 my-5">
 					<p className="font-bold mb-2">Solid with icon</p>
 					<div className="flex items-start space-x-2">
-						<Button type="success">
+						<Button color="success">
 							<SuccessIcon className="mr-2" />
 							Success
 						</Button>
-						<Button type="info">
+						<Button color="info">
 							<InfoIcon className="mr-2" />
 							Info
 						</Button>
-						<Button type="warning">
+						<Button color="warning">
 							<WarningIcon className="mr-2" />
 							Warning
 						</Button>
-						<Button type="danger">
+						<Button color="danger">
 							<ErrorIcon className="mr-2" />
 							Danger
 						</Button>
@@ -161,19 +161,19 @@ export const Examples = () => {
 				<div className="w-1/2 my-5">
 					<p className="font-bold mb-2">Outline with icon</p>
 					<div className="flex items-start space-x-2">
-						<Button type="success" variant="outline">
+						<Button color="success" variant="outline">
 							Success
 							<SuccessIcon className="ml-2" />
 						</Button>
-						<Button type="info" variant="outline">
+						<Button color="info" variant="outline">
 							Info
 							<InfoIcon className="ml-2" />
 						</Button>
-						<Button type="warning" variant="outline">
+						<Button color="warning" variant="outline">
 							Warning
 							<WarningIcon className="ml-2" />
 						</Button>
-						<Button type="danger" variant="outline">
+						<Button color="danger" variant="outline">
 							Danger
 							<ErrorIcon className="ml-2" />
 						</Button>
@@ -184,22 +184,22 @@ export const Examples = () => {
 				<div className="w-1/2 my-5">
 					<p className="font-bold mb-2">Link</p>
 					<div className="flex items-start space-x-2">
-						<Button type="primary" variant="link">
+						<Button color="primary" variant="link">
 							Primary
 						</Button>
-						<Button type="secondary" variant="link">
+						<Button color="secondary" variant="link">
 							Secondary
 						</Button>
-						<Button type="success" variant="link">
+						<Button color="success" variant="link">
 							Success
 						</Button>
-						<Button type="info" variant="link">
+						<Button color="info" variant="link">
 							Info
 						</Button>
-						<Button type="warning" variant="link">
+						<Button color="warning" variant="link">
 							Warning
 						</Button>
-						<Button type="danger" variant="link">
+						<Button color="danger" variant="link">
 							Danger
 						</Button>
 					</div>
@@ -207,22 +207,22 @@ export const Examples = () => {
 				<div className="w-1/2 my-5">
 					<p className="font-bold mb-2">Rounded</p>
 					<div className="flex items-start space-x-2">
-						<Button type="primary" rounded>
+						<Button color="primary" rounded>
 							Primary
 						</Button>
-						<Button type="secondary" rounded>
+						<Button color="secondary" rounded>
 							Secondary
 						</Button>
-						<Button type="success" rounded>
+						<Button color="success" rounded>
 							Success
 						</Button>
-						<Button type="info" rounded>
+						<Button color="info" rounded>
 							Info
 						</Button>
-						<Button type="warning" rounded>
+						<Button color="warning" rounded>
 							Warning
 						</Button>
-						<Button type="danger" rounded>
+						<Button color="danger" rounded>
 							Danger
 						</Button>
 					</div>
@@ -232,22 +232,22 @@ export const Examples = () => {
 				<div className="w-1/2 my-5">
 					<p className="font-bold mb-2">Disabled</p>
 					<div className="flex items-start space-x-2">
-						<Button disabled type="primary">
+						<Button disabled color="primary">
 							Primary
 						</Button>
-						<Button disabled type="secondary">
+						<Button disabled color="secondary">
 							Secondary
 						</Button>
-						<Button disabled type="success">
+						<Button disabled color="success">
 							Success
 						</Button>
-						<Button disabled type="info">
+						<Button disabled color="info">
 							Info
 						</Button>
-						<Button disabled type="warning">
+						<Button disabled color="warning">
 							Warning
 						</Button>
-						<Button disabled type="danger">
+						<Button disabled color="danger">
 							Danger
 						</Button>
 					</div>
@@ -255,22 +255,22 @@ export const Examples = () => {
 				<div className="w-1/2 my-5">
 					<p className="font-bold mb-2">Sizes</p>
 					<div className="flex items-start space-x-2">
-						<Button type="primary" size="xs">
+						<Button color="primary" size="xs">
 							button xs
 						</Button>
-						<Button type="secondary" size="sm">
+						<Button color="secondary" size="sm">
 							button sm
 						</Button>
-						<Button type="success" size="md">
+						<Button color="success" size="md">
 							button md
 						</Button>
-						<Button type="info" size="lg">
+						<Button color="info" size="lg">
 							button lg
 						</Button>
-						<Button type="warning" size="xl">
+						<Button color="warning" size="xl">
 							button xl
 						</Button>
-						<Button type="danger" size="2xl">
+						<Button color="danger" size="2xl">
 							button 2xl
 						</Button>
 					</div>

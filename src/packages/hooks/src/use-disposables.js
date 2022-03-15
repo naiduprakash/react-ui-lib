@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { disposables } from "../../utils/src";
+import { disposables } from "../../../internal/utils/disposables";
 
 export function useDisposables() {
 	// Using useState instead of useRef so that we can use the initializer function.

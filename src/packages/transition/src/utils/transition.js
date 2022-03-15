@@ -1,4 +1,5 @@
-import { once, disposables } from "../../../utils/src";
+import { once } from "../../../../internal/utils/once";
+import { disposables } from "../../../../internal/utils/disposables";
 
 export const Reason = {
 	Finished: "finished",

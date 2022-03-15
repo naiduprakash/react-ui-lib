@@ -1,4 +1,4 @@
-import { getOwnerDocument } from "../../utils/src";
+import { getOwnerDocument } from "../../../internal/utils/owner";
 import { useIsoMorphicEffect } from "./use-iso-morphic-effect";
 
 let interactables = new Set();

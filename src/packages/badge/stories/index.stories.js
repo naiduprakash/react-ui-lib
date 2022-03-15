@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Badge from "../../badge/src";
 import Button from "../../button/src";
-import { cx } from "../../utils/src";
+import { cx } from "../../../internal/utils/class-names";
 
 export default {
 	title: "Badge",

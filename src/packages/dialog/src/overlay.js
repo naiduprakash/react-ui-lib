@@ -1,8 +1,7 @@
 import { useCallback, useMemo } from "react";
 
-import { forwardRefWithAs, render } from "../../utils/src";
+import { forwardRefWithAs, render } from "../../../internal/utils/render";
 import { useSyncRefs, useId } from "../../hooks/src";
-import { useDialogContext } from "./context";
 
 const DialogStates = {
 	Open: 0,
@@ -11,7 +10,6 @@ const DialogStates = {
 
 let DEFAULT_OVERLAY_TAG = "div";
 let Overlay = forwardRefWithAs(function Overlay(props, ref) {
-	let [{ dialogState, close }] = useDialogContext("Dialog.Overlay");
 	let overlayRef = useSyncRefs(ref);
 
 	let id = `reactuilib-dialog-overlay-${useId()}`;
@@ -19,15 +17,16 @@ let Overlay = forwardRefWithAs(function Overlay(props, ref) {
 	let handleClick = useCallback(
 		(event) => {
 			if (event.target !== event.currentTarget) return;
-
-			event.preventDefault();
-			event.stopPropagation();
-			close();
+			if (props.onClick) {
+				event.preventDefault();
+				event.stopPropagation();
+				props.onClick(event);
+			}
 		},
 		[close]
 	);
 
-	let slot = useMemo(() => ({ open: dialogState === DialogStates.Open }), [dialogState]);
+	let slot = useMemo(() => ({}), []);
 	let propsWeControl = {
 		ref: overlayRef,
 		id,

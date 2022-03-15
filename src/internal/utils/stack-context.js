@@ -1,5 +1,5 @@
 import React, { createContext, useCallback, useContext } from "react";
-import { useIsoMorphicEffect } from "../packages/hooks/src";
+import { useIsoMorphicEffect } from "../../packages/hooks/src";
 
 let StackContext = createContext(() => {});
 StackContext.displayName = "StackContext";

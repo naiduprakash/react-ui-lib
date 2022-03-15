@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { useIsoMorphicEffect } from "./use-iso-morphic-effect";
-import { getOwnerDocument } from "../../utils/src";
+import { getOwnerDocument } from "../../../internal/utils/owner";
 
 export function useTreeWalker({ container, accept, walk, enabled = true }) {
 	let acceptRef = useRef(accept);

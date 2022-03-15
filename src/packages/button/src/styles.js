@@ -1,4 +1,4 @@
-import { cx } from "../../utils/src";
+import { cx } from "../../../internal/utils/class-names";
 
 const colors = (props) => {
 	let isOutlined = props.variant === "outline";
@@ -39,7 +39,7 @@ const colors = (props) => {
     ${isOutlined ? "bg-transparent text-red-500 hover:text-white" : "bg-red-500 text-white"}
     ${isLinked ? "text-red-500 active:text-red-600 hover:text-red-400 border-0" : ""} 
     ${isDisabled || isLinked ? "" : "active:bg-red-600 hover:bg-red-400"}`
-	}[props.type];
+	}[props.color];
 };
 
 const sizes = {

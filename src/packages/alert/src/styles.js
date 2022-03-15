@@ -1,4 +1,4 @@
-import { cx } from "../../utils/src";
+import { cx } from "../../../internal/utils/class-names";
 
 const colors = (props) => {
 	let isOutlined = props.variant === "outline";

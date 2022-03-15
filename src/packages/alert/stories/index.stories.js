@@ -2,7 +2,7 @@ import React from "react";
 
 import Alert from "../../alert/src";
 import Button from "../../button/src";
-import { cx } from "../../utils/src";
+import { cx } from "../../../internal/utils/class-names";
 
 const ErrorIcon = (props) => {
 	return (

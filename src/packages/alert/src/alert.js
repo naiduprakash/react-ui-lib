@@ -1,6 +1,6 @@
 import React from "react";
 
-import { cx } from "../../utils/src";
+import { cx } from "../../../internal/utils/class-names";
 import { useAlertClass } from "./styles";
 
 import "./index.css";

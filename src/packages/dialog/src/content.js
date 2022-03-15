@@ -1,7 +1,7 @@
-import { match, forwardRefWithAs, render } from "../../utils/src";
+import {  forwardRefWithAs, render } from "../../../internal/utils/render";
 import { useSyncRefs, useId } from "../../hooks/src";
 
-let DEFAULT_DESCRIPTION_TAG = "p";
+let DEFAULT_DESCRIPTION_TAG = "div";
 let Description = forwardRefWithAs(function Description(props, ref) {
 	let id = `reactuilib-description-${useId()}`;
 	let descriptionRef = useSyncRefs(ref);
