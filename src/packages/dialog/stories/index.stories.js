@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import Dialog from "../src";
 import Transition from "../../transition/src";
-import Button from "../../button/src";
+import Button from "@react-ui-lib/button";
 
 export default {
 	title: "Dialog",

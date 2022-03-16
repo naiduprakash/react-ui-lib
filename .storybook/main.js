@@ -19,9 +19,5 @@ module.exports = {
 			}
 		}
 	],
-	webpackFinal: async (config, { configType }) => {
-		config.resolve.alias = { ...config.resolve.alias, ...aliases };
-		return config;
-	},
 	framework: "@storybook/react"
 };

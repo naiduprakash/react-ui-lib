@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Badge from "../../badge/src";
-import Button from "../../button/src";
+import Badge from "@react-ui-lib/badge";
+import Button from "@react-ui-lib/button";
 import { cx } from "../../../internal/utils/class-names";
 
 export default {

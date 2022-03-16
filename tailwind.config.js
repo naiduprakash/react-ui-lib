@@ -10,7 +10,7 @@ module.exports = {
 				8.5: "2.125", // 34px
 				9.5: "2.375" // 38px
 			},
-		
+
 			keyframes: {
 				wave: {
 					"0%": { transform: "translateX(-100%)" },

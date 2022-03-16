@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"@react-ui-lib/alert": ["./src/packages/alert/src"],
+			"@react-ui-lib/button": ["./src/packages/button/src"],
+			"@react-ui-lib/badge": ["./src/packages/badge/src"],
+			"@react-ui-lib/dialog": ["./src/packages/dialog/src"],
+			"@react-ui-lib/skeleton": ["./src/packages/skeleton/src"]
+		},
+		"types": ["node", "react"]
+	},
+	"exclude": ["**/.*/", "**/build", "**/node_modules", "docs/export"]
+}

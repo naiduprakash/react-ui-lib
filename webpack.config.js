@@ -18,20 +18,15 @@ module.exports = (env) => {
 				{
 					test: /\.(js|jsx)$/,
 					exclude: /node_modules/,
-					use: {
-						loader: "babel-loader",
-						options: {
-							presets: ["@babel/preset-env", "@babel/react"]
-						}
-					}
+					use: ["babel-loader"]
 				}
 			]
-		},
-		resolve: {
-			alias: aliases,
-			extensions: [".js", ".jsx", ".json"],
-			modules: ["node_modules"]
 		}
+		// resolve: {
+		// 	alias: aliases,
+		// 	extensions: [".js", ".jsx", ".json"],
+		// 	modules: ["node_modules"]
+		// }
 	};
 
 	return config;
