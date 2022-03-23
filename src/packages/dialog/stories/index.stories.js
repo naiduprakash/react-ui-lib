@@ -80,11 +80,7 @@ export function Example2() {
 				</Button>
 			</div>
 
-			<Dialog
-				as="div"
-				open={isOpen}
-				onClose={closeModal}
-			>
+			<Dialog as="div" open={isOpen} onClose={closeModal}>
 				<h3 className="text-lg font-medium leading-6 text-gray-900">Payment successful</h3>
 				<p>
 					Your payment has been successfully submitted. We’ve sent you an email with all

@@ -1,8 +1,7 @@
 import React from "react";
 
-// import Alert from "../../alert/src";
-import Alert from "@react-ui-lib/alert";
-import Button from "@react-ui-lib/button";
+import Alert from "../../alert/src";
+import Button from "../../button/src";
 import { cx } from "../../../internal/utils/class-names";
 
 const ErrorIcon = (props) => {
