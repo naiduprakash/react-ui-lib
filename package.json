@@ -10,7 +10,7 @@
 		"clean:packages": "lerna exec npm run \"clean\"",
 		"clean:self": "rimraf dist && rimraf package-lock.json && rimraf node_modules",
 		"clean:install": "npm install --legacy-peer-deps && npm run bootstrap",
-		"prebuild": "npm run clean",
+		"prebuild": "npm run clean:install",
 		"build": "npm run build:components && npm run build:storybook",
 		"build:components": "lerna exec npm run \"build\"",
 		"build:storybook": "build-storybook -o docs",
