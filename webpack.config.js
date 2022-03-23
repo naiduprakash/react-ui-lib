@@ -1,5 +1,4 @@
 const pkg = require("./package.json");
-const { aliases } = require("./configs/aliases.config");
 
 module.exports = (env) => {
 	let config = {
@@ -21,16 +20,11 @@ module.exports = (env) => {
 					use: {
 						loader: "babel-loader",
 						options: {
-							presets: ["@babel/preset-env", "@babel/react"]
+							configFile: "../../../babel.config.js"
 						}
 					}
 				}
 			]
-		},
-		resolve: {
-			alias: aliases,
-			extensions: [".js", ".jsx", ".json"],
-			modules: ["node_modules"]
 		}
 	};
 
