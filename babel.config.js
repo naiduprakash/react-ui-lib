@@ -1,4 +1,3 @@
-// const { aliases } = require("./configs/aliases.config");
 const path = require("path");
 
 function resolveAliasPath(relativeToBabelConf) {
@@ -18,13 +17,10 @@ const aliases = {
 };
 
 module.exports = function getBabelConfig(api) {
-	const env = api.env("development");
-
-	let presets = ["@babel/preset-env", "@babel/preset-react"];
-
+	api.cache(false);
 	return {
-		ignore: [/@babel[\\|/]runtime/], // Fix a Windows issue.
-		presets,
+		ignore: [/node_modules/],
+		presets: ["@babel/preset-env", "@babel/preset-react"],
 		plugins: [
 			[
 				"module-resolver",

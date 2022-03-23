@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 import "./index.css";
 
-import { cx } from "src/internal/utils/class-names";
-import useFocus from "src/internal/hooks/use-focus";
+import { cx } from "../../../internal/utils/class-names";
+import useFocus from "../../../internal/hooks/use-focus";
 
 const TextField = React.forwardRef((props, ref) => {
 	const { id, type, label, placeholder, focused, error, helperText, variant, ...restProps } =

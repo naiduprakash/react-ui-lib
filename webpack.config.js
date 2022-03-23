@@ -1,5 +1,4 @@
 const pkg = require("./package.json");
-const { aliases } = require("./configs/aliases.config");
 
 module.exports = (env) => {
 	let config = {
@@ -18,15 +17,15 @@ module.exports = (env) => {
 				{
 					test: /\.(js|jsx)$/,
 					exclude: /node_modules/,
-					use: ["babel-loader"]
+					use: {
+						loader: "babel-loader",
+						options: {
+							configFile: "../../../babel.config.js"
+						}
+					}
 				}
 			]
 		}
-		// resolve: {
-		// 	alias: aliases,
-		// 	extensions: [".js", ".jsx", ".json"],
-		// 	modules: ["node_modules"]
-		// }
 	};
 
 	return config;
