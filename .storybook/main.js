@@ -1,5 +1,3 @@
-const { aliases } = require("../configs/aliases.config");
-
 module.exports = {
 	stories: ["../src/packages/**/*.stories.mdx", "../src/packages/**/*.stories.@(js|jsx|ts|tsx)"],
 	core: {

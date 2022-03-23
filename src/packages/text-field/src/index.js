@@ -15,10 +15,6 @@ const TextField = React.forwardRef((props, ref) => {
 
 	let inputLabel = placeholder || label || "";
 
-	console.log("focused", focused);
-	console.log("isInputFocused", isInputFocused);
-	console.log("inputRef?.current?.value", inputRef?.current?.value);
-	console.log("isFocused", isFocused);
 	useEffect(() => {
 		let _isFocused = focused || isInputFocused || !!inputRef?.current?.value;
 		setIsFocused(_isFocused);
@@ -26,9 +22,9 @@ const TextField = React.forwardRef((props, ref) => {
 
 	let rootClasses = cx("flex flex-col relative rounded");
 	let inputClasses = cx(
-		"rounded border-0 outline-0 p-4 ring-2 ring-gray-500  rounded",
+		"rounded border-0 outline-0 p-4 ring-1 ring-gray-500  rounded",
 		isFocused ? "ring-blue-500 border-0 outline-0" : "",
-		error ? "ring-red-500" : ""
+		error  ? "ring-red-500" : ""
 	);
 	let labelClasses = cx(
 		"transition origin-top-left absolute pointer-events-none rounded top-0 bg-transparent left-0 bg-white scale-1 translate-x-4 translate-y-4",
