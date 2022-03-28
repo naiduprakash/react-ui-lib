@@ -1,7 +1,7 @@
 {
 	"name": "@react-ui-lib/dialog",
 	"description": "Dialog component",
-	"version": "1.0.8-alpha.0",
+	"version": "1.0.8",
 	"license": "MIT",
 	"author": "Prakash Naidu",
 	"main": "dist/index.js",

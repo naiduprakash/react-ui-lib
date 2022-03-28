@@ -1,7 +1,7 @@
 {
 	"name": "@react-ui-lib/checkbox",
 	"description": "Checkbox component",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"author": "Prakash Naidu",
 	"main": "dist/index.js",

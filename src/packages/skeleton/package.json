@@ -1,7 +1,7 @@
 {
 	"name": "@react-ui-lib/skeleton",
 	"description": "Skeleton component",
-	"version": "1.0.9-alpha.0",
+	"version": "1.0.9",
 	"license": "MIT",
 	"author": "Prakash Naidu",
 	"main": "dist/index.js",
