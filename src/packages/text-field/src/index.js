@@ -7,8 +7,18 @@ import { cx } from "../../../internal/utils/class-names";
 import useFocus from "../../../internal/hooks/use-focus";
 
 const TextField = React.forwardRef((props, ref) => {
-	const { id, type, label, placeholder, focused, error, helperText, variant, ...restProps } =
-		props;
+	const {
+		id,
+		type,
+		label,
+		placeholder,
+		focused,
+		error,
+		helperText,
+		variant,
+		classNames = {},
+		...restProps
+	} = props;
 	const inputRef = useRef();
 	const isInputFocused = useFocus(inputRef);
 	const [isFocused, setIsFocused] = useState(false);
@@ -20,19 +30,21 @@ const TextField = React.forwardRef((props, ref) => {
 		setIsFocused(_isFocused);
 	}, [focused, isInputFocused, inputRef?.current?.value]);
 
-	let rootClasses = cx("flex flex-col relative rounded");
+	let rootClasses = cx(classNames.root, "flex flex-col relative rounded");
 	let inputClasses = cx(
-		"rounded border-0 outline-0 p-4 ring-1 ring-gray-500  rounded",
+		classNames.input,
+		"rounded border-0 outline-0 p-2 ring-1 ring-gray-500  rounded",
 		isFocused ? "ring-blue-500 border-0 outline-0" : "",
-		error  ? "ring-red-500" : ""
+		error ? "ring-red-500" : ""
 	);
 	let labelClasses = cx(
-		"transition origin-top-left absolute pointer-events-none rounded top-0 bg-transparent left-0 bg-white scale-1 translate-x-4 translate-y-4",
-		isFocused ? "translate-y-[-50%] text-blue-500 translate-x-4 scale-[0.75]" : "",
+		classNames.label,
+		"transition origin-top-left absolute pointer-events-none rounded top-0 bg-transparent left-0 bg-white scale-1 translate-x-2 translate-y-2",
+		isFocused ? "translate-y-[-50%] text-blue-500 translate-x-2 scale-[0.75]" : "",
 		error && isFocused ? "text-red-500" : ""
 	);
 
-	let helperTextClasses = cx("", error ? "text-red-500" : "");
+	let helperTextClasses = cx(classNames.helperText, error ? "text-red-500" : "");
 
 	return (
 		<div ref={ref} className={rootClasses}>
