@@ -30,21 +30,21 @@ const TextField = React.forwardRef((props, ref) => {
 		setIsFocused(_isFocused);
 	}, [focused, isInputFocused, inputRef?.current?.value]);
 
-	let rootClasses = cx(classNames.root, "flex flex-col relative rounded");
+	let rootClasses = cx("flex flex-col relative rounded", classNames.root);
 	let inputClasses = cx(
-		classNames.input,
 		"rounded border-0 outline-0 p-2 ring-1 ring-gray-500  rounded",
 		isFocused ? "ring-blue-500 border-0 outline-0" : "",
-		error ? "ring-red-500" : ""
+		error ? "ring-red-500" : "",
+		classNames.input
 	);
 	let labelClasses = cx(
-		classNames.label,
 		"transition origin-top-left absolute pointer-events-none rounded top-0 bg-transparent left-0 bg-white scale-1 translate-x-2 translate-y-2",
 		isFocused ? "translate-y-[-50%] text-blue-500 translate-x-2 scale-[0.75]" : "",
-		error && isFocused ? "text-red-500" : ""
+		error && isFocused ? "text-red-500" : "",
+		classNames.label
 	);
 
-	let helperTextClasses = cx(classNames.helperText, error ? "text-red-500" : "");
+	let helperTextClasses = cx(error ? "text-red-500" : "", classNames.helperText);
 
 	return (
 		<div ref={ref} className={rootClasses}>

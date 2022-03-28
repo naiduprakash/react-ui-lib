@@ -6,7 +6,6 @@ import IndeterminateCheckBoxIcon from "./indeterminate-checkbox-icon";
 import "./index.css";
 
 import { cx } from "../../../internal/utils/class-names";
-import useFocus from "../../../internal/hooks/use-focus";
 
 const Checkbox = React.forwardRef((props, ref) => {
 	const {
@@ -16,9 +15,6 @@ const Checkbox = React.forwardRef((props, ref) => {
 		classNames = {},
 		...restProps
 	} = props;
-	const inputRef = useRef();
-
-	const isFocused = useFocus(inputRef);
 
 	let SVGCheckboxIcon = null;
 	if (indeterminate) {
@@ -34,7 +30,7 @@ const Checkbox = React.forwardRef((props, ref) => {
 	};
 
 	let rootClasses = cx(
-		"inline-flex items-center content-center relative box-border bg-transparent outline-0 border-0 m-0 cursor-pointer select-none align-middle appearance-none p-2 rounded-[50%] text-blue-500 hover:bg-blue-50 focus:bg-blue-50",
+		"inline-flex items-center content-center relative box-border bg-transparent outline-0 border-0 m-0 cursor-pointer select-none align-middle appearance-none p-1.5 rounded-[50%] text-blue-500 hover:bg-blue-50 focus:bg-blue-50",
 		classNames.root
 	);
 
@@ -50,7 +46,6 @@ const Checkbox = React.forwardRef((props, ref) => {
 	return (
 		<span ref={ref} className={rootClasses} tabIndex="0">
 			<input
-				ref={inputRef}
 				type="checkbox"
 				className={inputClasses}
 				checked={checked}
