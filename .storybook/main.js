@@ -1,7 +1,5 @@
-const { aliases } = require("../configs/aliases.config");
-
 module.exports = {
-	stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+	stories: ["../src/packages/**/*.stories.mdx", "../src/packages/**/*.stories.@(js|jsx|ts|tsx)"],
 	core: {
 		builder: "webpack5"
 	},
@@ -19,9 +17,5 @@ module.exports = {
 			}
 		}
 	],
-	webpackFinal: async (config, { configType }) => {
-		config.resolve.alias = { ...config.resolve.alias, ...aliases };
-		return config;
-	},
 	framework: "@storybook/react"
 };

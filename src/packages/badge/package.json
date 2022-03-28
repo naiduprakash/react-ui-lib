@@ -1,0 +1,20 @@
+{
+	"name": "@react-ui-lib/badge",
+	"description": "Badge component",
+	"version": "1.0.1-alpha.0",
+	"license": "MIT",
+	"author": "Prakash Naidu",
+	"main": "dist/index.js",
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "cross-env webpack --mode production --config ../../../webpack.config.js --env package=@react-ui-lib/badge",
+		"clean": "rimraf dist && rimraf package-lock.json && rimraf node_modules ",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"peerDependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	}
+}
